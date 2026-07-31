@@ -12,7 +12,7 @@ def train_accurate_model(data_path):
     df = pd.read_csv(data_path)
     
     # Separate features and target
-    X = df.drop(columns=['Loan_Status', 'Loan_ID'], errors='ignore')
+    X = df.drop(columns=['Loan_Status', 'Loan_ID', 'Remarks'], errors='ignore')
     y = df['Loan_Status']
     
     # Encode target variable
